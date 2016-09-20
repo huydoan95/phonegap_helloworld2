@@ -28,22 +28,77 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+       
+<!--        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"/>-->
+        <meta http-equiv="Content-Security-Policy" content="default-src * ; img-src 'self' data: * ; style-src 'self' 'unsafe-inline' http://www.w3.org/2000/svg; connect-src http://www.w3.org/2000/svg; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://huyheo.tk http://www.w3.org/2000/svg; child-src 'self'">
+<!--        <meta http-equiv="Access-Control-Allow-Origin" content="*"/>-->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+<!--        <link rel="stylesheet" type="text/css" href="css/index.css">-->
+        <link rel="stylesheet" type="text/css" href="css/ratchet.min.css">
+        <link rel="stylesheet" type="text/css" href="css/ratchet-theme-android.min.css">
+        <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<!--        <link rel="stylesheet" type="text/css" href="css/xmanager.css">-->
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <header class="bar bar-nav">
+            <h1 class="title">XManager</h1>
+        </header>
+        
+</header>
+
+
+        <div class="content">
+<!--            <div class="card">-->
+                <div id="myDiv">
+                </div>
+<!--                <button class="btn btn-block btn-primary" id="take-picture">Take Picture</button>-->
+<!--            </div>-->
+
+<!--
+            <div class="card" id="share-container">
+                <img id="photo" src="#">
+                <form>
+                  <input type="text" id="caption" placeholder="Caption">
+                  <button class="btn btn-positive btn-block" id="share">Share</button>
+                </form>
             </div>
+-->
         </div>
+<!--
+        <div class="flex-container">
+            <header class="bar bar-nav">
+              <h1 class="title">XManager</h1>
+            </header>
+
+            <article class="article">
+                <div class="content">
+                    <div class="card">
+-->
+                <!--<div class="app">-->
+<!--                        <div id="myDiv"></div>-->
+                    <!--<button id="btnTest">Test</button>-->
+                   <!--<div id="testJson">ABC</div>-->
+                <!--</div>-->
+<!--
+                    </div>
+                </div>
+            </article>
+
+            <footer>
+                <div class="card">Copyright &copy; APACHE CORDOVA</div>
+            </footer>
+        </div>
+-->
+        
+        
+        
+        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
     </body>
 </html>
